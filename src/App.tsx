@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { LoginGate } from './components/LoginGate';
 import { Navbar } from './components/Navbar';
 import { HeroSanctum } from './components/HeroSanctum';
 import { CounselorStory } from './components/CounselorStory';
@@ -10,11 +11,23 @@ import { TestimonialsAndFaq } from './components/TestimonialsAndFaq';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
+  // Always require password on page reload / fresh visit
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+
   const [selectedModality, setSelectedModality] = useState<string | undefined>(undefined);
 
   const handleSelectModality = (offeringId: string) => {
     setSelectedModality(offeringId);
   };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+  };
+
+  // If not authenticated, show password protection gate
+  if (!isAuthenticated) {
+    return <LoginGate onLoginSuccess={() => setIsAuthenticated(true)} />;
+  }
 
   return (
     <div className="min-h-screen bg-sanctum-950 text-sacred-sandalwood selection:bg-amber-500 selection:text-sanctum-950 font-sans flex flex-col justify-between">
@@ -42,8 +55,8 @@ export const App: React.FC = () => {
       {/* Testimonials & FAQs */}
       <TestimonialsAndFaq />
 
-      {/* Traditional Vedic Footer */}
-      <Footer />
+      {/* Traditional Vedic Footer with Lock Portal option */}
+      <Footer onLogout={handleLogout} />
     </div>
   );
 };

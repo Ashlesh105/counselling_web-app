@@ -1,8 +1,12 @@
 import React from 'react';
-import { Sparkles, Heart, Phone, Mail, MapPin } from 'lucide-react';
+import { Sparkles, Heart, Phone, Mail, MapPin, Lock } from 'lucide-react';
 import { siteContent } from '../config/siteContent';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onLogout?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onLogout }) => {
   const { counselor } = siteContent;
 
   return (
@@ -87,9 +91,22 @@ export const Footer: React.FC = () => {
             <span>© {new Date().getFullYear()} Sacred Healing Sanctum. All blessings reserved.</span>
           </div>
 
-          <div className="flex items-center gap-1 text-amber-400/80">
-            <Heart className="w-3 h-3 text-amber-400 fill-amber-400" />
-            <span>Held in pure loving presence</span>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1 text-amber-400/80">
+              <Heart className="w-3 h-3 text-amber-400 fill-amber-400" />
+              <span>Held in pure loving presence</span>
+            </div>
+
+            {onLogout && (
+              <button
+                onClick={onLogout}
+                className="text-sacred-sandalwood/40 hover:text-amber-400 text-[10px] flex items-center gap-1 transition-colors"
+                title="Lock Sanctum Access"
+              >
+                <Lock className="w-3 h-3" />
+                <span>Lock Portal</span>
+              </button>
+            )}
           </div>
         </div>
 
