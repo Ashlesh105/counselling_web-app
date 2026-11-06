@@ -66,7 +66,7 @@ export const VibesAndEnergySection: React.FC = () => {
             "When you sit with someone who doesn't rush you, doesn't judge you, and genuinely cares about your wellbeing, your mind naturally stops fighting. Healing begins the moment you feel truly heard."
           </p>
           <span className="font-cinzel text-xs sm:text-sm font-bold text-amber-400 tracking-wider uppercase block">
-            — Acharya Meera Sharma
+            — Prathika Kini
           </span>
         </div>
 

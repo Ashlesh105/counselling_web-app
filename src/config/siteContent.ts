@@ -12,7 +12,7 @@ export interface CounselorProfile {
   name: string;
   title: string;
   subtitle: string;
-  experienceYears: number;
+  experienceYears?: number;
   phone: string;
   whatsapp: string;
   email: string;
@@ -23,59 +23,31 @@ export interface CounselorProfile {
   photoUrl: string;
 }
 
-export interface LaunchConfig {
-  eventName: string;
-  eventSubtitle: string;
-  sacredLocation: string;
-  defaultLaunchTimestamp: string;
-  blessingTextBalaji: string;
-  slokaBalaji: string;
-  slokaBalajiMeaning: string;
-  blessingTextMahadev: string;
-  slokaMahadev: string;
-  slokaMahadevMeaning: string;
-}
-
 export const siteContent = {
   // 1. Counselor Brand & Profile
   counselor: {
-    name: "Acharya Meera Sharma",
+    name: "Prathika Kini",
     title: "Compassionate Counselor & Life Mentor",
     subtitle: "A Patient Listener • Empathetic Guide • Calming Presence",
-    experienceYears: 12,
     phone: "+91 98765 43210",
     whatsapp: "919876543210",
     email: "sanctum.counseling@gmail.com",
-    location: "Tirupati / Bengaluru & Online Worldwide",
-    photoUrl: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=800",
+    location: "Bengaluru & Online Worldwide",
+    photoUrl: "/prathika-kini.jpg",
     coreBelief: "Most people do not need lectures or judgment. They simply need someone genuine to listen to their pain, understand their dilemma, and offer gentle, practical guidance with positive energy.",
     bio: [
-      "In a world where everyone is busy talking and judging, finding someone who genuinely listens with complete patience is rare. Acharya Meera provides a safe, confidential sanctuary for anyone dealing with life's heavy phases, emotional exhaustion, relationship friction, or personal confusion.",
+      "In a world where everyone is busy talking and judging, finding someone who genuinely listens with complete patience is rare. Prathika Kini provides a safe, confidential sanctuary for anyone dealing with life's heavy phases, emotional exhaustion, relationship friction, or personal confusion.",
       "Every session is grounded in empathy, mutual respect, and positive calming vibrations. Whether you need to unload what's been choking inside your chest, need grounded perspective on a hard decision, or simply want to feel lighter and peaceful again, you will be heard with wholehearted care."
     ],
     credentials: [
-      "12+ Years of Compassionate Counseling & Life Mentorship",
+      "Compassionate Counseling & Life Mentorship",
       "Over 3,500+ One-on-One Confidential Listening Sessions",
       "Specialized in Relationship, Career Anxiety & Life Crossroads",
       "Certified in Modern Psychological Counseling & Vedic Life Philosophy"
     ]
   } as CounselorProfile,
 
-  // 2. Tirupati Tirumala Sacred Launch Config
-  launch: {
-    eventName: "Auspicious Global Sanctum Launch",
-    eventSubtitle: "Consecrated Under the Divine Gaze of the Seven Hills",
-    sacredLocation: "Sri Venkateswara Swamy Sannidhi, Tirupati Tirumala",
-    defaultLaunchTimestamp: "2026-11-07T06:00:00+05:30",
-    blessingTextBalaji: "May Lord Venkateswara, the granter of peace and dispeller of Kalyug hardships, bless your heart with relief, clarity, and courage to overcome every obstacle.",
-    slokaBalaji: "काल्याणाद्भुत गात्राय कामितार्थ प्रदायिने । श्रीमद् वेङ्कटनाथाय श्रीनिवासाय ते नमः ॥",
-    slokaBalajiMeaning: "Obeisance to Sri Srinivasa (Lord Venkateswara), whose form is auspicious and miraculous, and who bestows strength and cherished peace upon all seekers.",
-    blessingTextMahadev: "May Lord Mahadev, the tranquil master of meditation, dissolve your mental turbulence, grant calmness to your restless thoughts, and fill your space with peaceful energy.",
-    slokaMahadev: "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् । उर्वारुकमिव बन्धनान्मृत्य pushyate स्वाहा ॥",
-    slokaMahadevMeaning: "We revere the Great Auspicious One, the giver of health and inner calm. May He liberate our minds from anxiety and bring serene peace."
-  } as LaunchConfig,
-
-  // 3. Counseling & Guidance Focus Areas (Grounded, relatable, NO esoteric packages)
+  // 2. Counseling & Guidance Focus Areas (Grounded, relatable, NO esoteric packages)
   offerings: [
     {
       id: "deep-listening",
@@ -201,7 +173,7 @@ export const siteContent = {
     {
       name: "Radhika M.",
       city: "Hyderabad",
-      story: "I was carrying the burden of family misunderstandings for months. Acharya Meera listened with such genuine patience that I felt like a massive weight was lifted off my chest. Her advice was warm, practical, and so reassuring.",
+      story: "I was carrying the burden of family misunderstandings for months. Prathika Kini listened with such genuine patience that I felt like a massive weight was lifted off my chest. Her advice was warm, practical, and so reassuring.",
       sessionType: "Deep Listening & Guidance"
     },
     {
@@ -222,7 +194,7 @@ export const siteContent = {
   faqs: [
     {
       question: "What happens during a listening & counseling session?",
-      answer: "You are given complete, uninterrupted space to speak whatever is on your mind. Acharya Meera listens with total attention, helps you organize your thoughts, and offers practical, comforting advice grounded in real-life wisdom."
+      answer: "You are given complete, uninterrupted space to speak whatever is on your mind. Prathika Kini listens with total attention, helps you organize your thoughts, and offers practical, comforting advice grounded in real-life wisdom."
     },
     {
       question: "Are my conversations confidential?",

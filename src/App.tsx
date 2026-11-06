@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { LaunchConfigProvider } from './context/LaunchConfigContext';
-import { TirupatiLaunchBanner } from './components/TirupatiLaunchBanner';
+import { Navbar } from './components/Navbar';
 import { HeroSanctum } from './components/HeroSanctum';
 import { CounselorStory } from './components/CounselorStory';
 import { HealingOfferings } from './components/HealingOfferings';
@@ -18,36 +17,34 @@ export const App: React.FC = () => {
   };
 
   return (
-    <LaunchConfigProvider>
-      <div className="min-h-screen bg-sanctum-950 text-sacred-sandalwood selection:bg-amber-500 selection:text-sanctum-950 font-sans flex flex-col justify-between">
-        {/* Tirupati Tirumala Sacred Launch Banner & Countdown */}
-        <TirupatiLaunchBanner />
+    <div className="min-h-screen bg-sanctum-950 text-sacred-sandalwood selection:bg-amber-500 selection:text-sanctum-950 font-sans flex flex-col justify-between">
+      {/* Top Sacred Navigation Bar */}
+      <Navbar />
 
-        {/* Hero Section with 432Hz Soundscape */}
-        <HeroSanctum />
+      {/* Hero Section with Hari-Hara Resonating Om & 432Hz Soundscape */}
+      <HeroSanctum />
 
-        {/* Counselor Identity & Lineage */}
-        <CounselorStory />
+      {/* Counselor Identity & Lineage */}
+      <CounselorStory />
 
-        {/* 4 Core Healing Modalities */}
-        <HealingOfferings onSelectOffering={handleSelectModality} />
+      {/* Core Guidance Topics */}
+      <HealingOfferings onSelectOffering={handleSelectModality} />
 
-        {/* Interactive Energy & Vibe Assessment */}
-        <EnergyVibeChecker onRecommendationSelect={handleSelectModality} />
+      {/* Interactive Self Check-in */}
+      <EnergyVibeChecker onRecommendationSelect={handleSelectModality} />
 
-        {/* The Role of Vibes, Frequency & Subtle Prana */}
-        <VibesAndEnergySection />
+      {/* Positive Vibes & Calming Presence */}
+      <VibesAndEnergySection />
 
-        {/* Sacred Booking Container */}
-        <BookingSection selectedOfferingId={selectedModality} />
+      {/* Booking Container */}
+      <BookingSection selectedOfferingId={selectedModality} />
 
-        {/* Testimonials & FAQs */}
-        <TestimonialsAndFaq />
+      {/* Testimonials & FAQs */}
+      <TestimonialsAndFaq />
 
-        {/* Traditional Vedic Footer */}
-        <Footer />
-      </div>
-    </LaunchConfigProvider>
+      {/* Traditional Vedic Footer */}
+      <Footer />
+    </div>
   );
 };
 

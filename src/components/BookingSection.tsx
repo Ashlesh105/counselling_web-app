@@ -76,7 +76,7 @@ export const BookingSection: React.FC<BookingSectionProps> = ({ selectedOffering
                 Your Sacred Request Has Been Received
               </h3>
               <p className="text-xs sm:text-sm text-sacred-sandalwood/80 font-serif max-w-md mx-auto mb-6">
-                Acharya {counselor.name} will personally review your intake note and confirm your session time within 4-6 hours.
+                {counselor.name} will personally review your request and confirm your session time within 4-6 hours.
               </p>
 
               <button

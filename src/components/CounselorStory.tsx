@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Heart, Sparkles, MessageCircle } from 'lucide-react';
+import { Award, Heart, MessageCircle } from 'lucide-react';
 import { siteContent } from '../config/siteContent';
 
 export const CounselorStory: React.FC = () => {
@@ -32,12 +32,6 @@ export const CounselorStory: React.FC = () => {
                   {counselor.title}
                 </span>
               </div>
-            </div>
-
-            {/* Experience Pill */}
-            <div className="absolute -top-3 -right-3 px-3.5 py-1 rounded-full bg-amber-500 text-sanctum-950 font-cinzel font-bold text-xs shadow-lg shadow-amber-500/30 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{counselor.experienceYears}+ Years of Service</span>
             </div>
           </div>
         </div>
@@ -79,7 +73,7 @@ export const CounselorStory: React.FC = () => {
 
           {/* Direct WhatsApp CTA */}
           <a
-            href={`https://wa.me/${counselor.whatsapp}?text=${encodeURIComponent("Namaste Acharya Ji, I would like to inquire about a healing & listening consultation.")}`}
+            href={`https://wa.me/${counselor.whatsapp}?text=${encodeURIComponent("Namaste Prathika Ji, I would like to inquire about a counseling & listening consultation.")}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-cinzel font-bold text-xs uppercase tracking-wider shadow-lg shadow-emerald-950 transition-all"

@@ -4,7 +4,7 @@ import { toggleAmbientSoundscape, playTempleBell } from '../utils/audioUtils';
 import { HariHaraOmBackdrop } from './HariHaraOmBackdrop';
 
 export const HeroSanctum: React.FC = () => {
-  const [isPlayingSound, setIsPlayingSound] = useState(false);
+  const [isPlayingSound, setIsPlayingSound] = useState(true);
 
   const handleSoundToggle = () => {
     const active = toggleAmbientSoundscape((state) => setIsPlayingSound(state));
@@ -53,7 +53,7 @@ export const HeroSanctum: React.FC = () => {
 
       {/* Main Hero Content */}
       <div className="max-w-5xl mx-auto text-center relative z-10">
-        
+
         {/* Sanskrit Inscription Pill */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs sm:text-sm font-serif mb-6 shadow-sm">
           <Sparkles className="w-3.5 h-3.5 text-amber-400" />

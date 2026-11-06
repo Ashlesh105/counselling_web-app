@@ -32,11 +32,11 @@ export const Footer: React.FC = () => {
               </span>
             </div>
             <p className="text-xs sm:text-sm text-sacred-sandalwood/70 font-serif max-w-sm leading-relaxed mb-4">
-              Where empathetic psychological listening meets traditional Vedic energy alignment, prana restoration, and spiritual grounding.
+              Where empathetic psychological listening meets traditional Vedic wisdom, positive energy, and emotional peace.
             </p>
             <div className="inline-flex items-center gap-2 text-xs text-amber-300 font-serif">
               <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span>Consecrated at Sri Venkateswara Kshetram, Tirupati Tirumala</span>
+              <span>Blessed by Divine Grace • Held in Sacred Presence</span>
             </div>
           </div>
 
